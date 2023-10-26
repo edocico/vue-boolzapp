@@ -39,13 +39,37 @@
 .main-app {
     border: 1px solid black;
     display: flex;
-    min-height: 500px;
+    min-height: 700px;
 }
+/* contact section */
 
 .contact-section {
     width: 200px;
     border: 1px solid black;
+    display: flex;
+    flex-direction: column;
 }
+
+.user-contact {
+    min-height: 50px;
+    border: 1px solid black;
+}
+
+.contact-notification {
+    min-height: 50px;
+    border: 1px solid black;
+}
+
+.contact-search {
+    min-height: 40px;
+    border: 1px solid black;
+}
+
+.contact-list {
+    flex-grow: 1;
+    border: 1px solid black;
+}
+/* chat section */
 
 .chat-section {
     flex-grow: 1;
@@ -61,9 +85,36 @@
 .chat-header {
     border: 1px solid black;
     min-height: 50px;
+    background-color: #EBE9EB;
 }
-
+/* chat input */
 .chat-input {
     border: 1px solid black;
     min-height: 50px;
+    background-color: #EBE9EB;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5px;
+}
+
+.input-space {
+    flex-grow: 1;
+}
+
+.input-space input {
+    width: 100%;
+    border-radius: 10px;
+    line-height: 2.5em;
+    padding-left: 10px;
+}
+
+.input-smile {
+    padding: 10px 20px;
+    font-size: 20px;
+}
+
+.input-mic {
+    padding: 10px 20px;
+    font-size: 20px;
 }
