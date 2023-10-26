@@ -72,7 +72,99 @@ const { createApp } = Vue
             ],
           },
           {
-            
+            name: 'Alessandro B.',
+            avatar: './img/avatar_4.png',
+            visible: true,
+            messages: [
+              {
+                date: '10/01/2020 15:30:55',
+                message: 'Lo sai che ha aperto una nuova pizzeria?',
+                status: 'sent'
+              },
+              {
+                date: '10/01/2020 15:50:00',
+                message: 'Si, ma preferirei andare al cinema',
+                status: 'received'
+              }
+            ],
+          },
+          {
+            name: 'Alessandro L.',
+            avatar: './img/avatar_5.png',
+            visible: true,
+            messages: [
+              {
+                date: '10/01/2020 15:30:55',
+                message: 'Ricordati di chiamare la nonna',
+                status: 'sent'
+              },
+              {
+                date: '10/01/2020 15:50:00',
+                message: 'Va bene, stasera la sento',
+                status: 'received'
+              }
+            ],
+          },
+          {
+            name: 'Claudia',
+            avatar: './img/avatar_6.png',
+            visible: true,
+            messages: [
+              {
+                date: '10/01/2020 15:30:55',
+                message: 'Ciao Claudia, hai novità?',
+                status: 'sent'
+              },
+              {
+                date: '10/01/2020 15:50:00',
+                message: 'Non ancora',
+                status: 'received',
+              },
+              {
+                date: '10/01/2020 15:51:00',
+                message: 'Nessuna nuova, buona nuova',
+                status: 'sent'
+              }
+            ],
+          },
+          {
+            name: 'Federico',
+            avatar: './img/avatar_7.png',
+            visible: true,
+            messages: [
+              {
+                date: '10/01/2020 15:30:55',
+                message: 'Fai gli auguri a Martina che è il suo compleanno!',
+                status: 'sent'
+              },
+              {
+                date: '10/01/2020 15:50:00',
+                message: 'Grazie per avermelo ricordato, le scrivo subito!',
+                status: 'received'
+              }
+            ],
+          },
+          {
+            name: 'Davide',
+            avatar: './img/avatar_8.png',
+            visible: true,
+            messages: [
+              {
+                date: '10/01/2020 15:30:55',
+                message: 'Ciao, andiamo a mangiare la pizza stasera?',
+                status: 'received'
+              },
+              {
+                date: '10/01/2020 15:50:00',
+                message: 'No, l\'ho già mangiata ieri, ordiniamo sushi!',
+                status: 'sent'
+              },
+              {
+                date: '10/01/2020 15:51:00',
+                message: 'Ok!!',
+                status: 'received'
+              }
+            ],
           }
         ]
       }
