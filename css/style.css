@@ -173,39 +173,34 @@ img {
     display: flex;
 }
 
-.received-message {
-    border: 1px solid black;
+.received-message {    
     min-width: 50px;
-    padding: 5px 5px;
-    flex-basis: calc(100% / 2);
+    padding: 5px 5px;    
+}
+
+.main-chat ul {
+    display: flex;
+    flex-direction: column;
 }
 
 .received-message li {
     list-style: none;
-    background-color: white;
+    max-width: 45%;
     line-height: 1.5em;
     font-size: 14px;
     border-radius: 15px;
     padding: 5px 5px;
 }
 
-.sent-message {
-    min-width: 50px;
-    border: 1px solid black;
-    padding: 5px 10px;
-    flex-basis: calc(100% / 2);
-}
-
-.sent-message li {
-    list-style: none;
+.message-sent {
     background-color: #D7F9BC;
-    line-height: 1.5em;
-    font-size: 14px;
-    border-radius: 15px;
-    padding: 5px 5px;
+    align-self: flex-end;
 }
 
-
+.message-received {
+    background-color: #FFFEFF;
+    align-self: flex-start;
+}
 
 /* chat header */
 
