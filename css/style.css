@@ -50,7 +50,7 @@ img {
 
 .contact-section {
     width: 250px;
-    border: 1px solid black;
+    border-right: 1px solid #E6E2E0;
     display: flex;
     flex-direction: column;
 }
@@ -119,12 +119,37 @@ img {
 .contact-search .symbol {
     padding: 5px 15px;
     color: #989798;
-    border: 1px solid black;
+    border: 1px solid #989798;
 }
 /* contact list */
 .contact-list {
     flex-grow: 1;
-    border: 1px solid black;
+    background-color: white;
+}
+
+.contact-list li {
+    display: flex;
+    padding-left: 15px;
+    padding-top: 8px;
+    padding-bottom: 5px;
+    padding-right: 5px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5px;
+    border-bottom: 1px solid #989798;
+}
+
+.contact-list img {
+    width: 50px;
+}
+
+.contact-list .text {
+    font-size: 12px;
+}
+
+.contact-list .hour {
+    font-size: 8px;
+    align-self: flex-start;
 }
 /* chat section */
 
@@ -136,7 +161,8 @@ img {
 
 .main-chat {
     flex-grow: 1;
-    
+    background-image: url(../img/mine.jpg);
+    background-size: contain;
 }
 
 /* chat header */
@@ -183,8 +209,9 @@ img {
 .input-space input {
     width: 100%;
     border-radius: 10px;
-    line-height: 2.5em;
+    line-height: 2.9em;
     padding-left: 10px;
+    border: none;
 }
 
 .input-smile {
