@@ -32,7 +32,7 @@
 }
 
 .container {
-    width: 800px;
+    width: 1000px;
     margin: 0 auto;
 }
 
@@ -49,7 +49,7 @@ img {
 /* contact section */
 
 .contact-section {
-    width: 250px;
+    min-width: 280px;
     border-right: 1px solid #E6E2E0;
     display: flex;
     flex-direction: column;
@@ -94,7 +94,7 @@ img {
     background-color: white;
     color: #8EDAFD;
     border-radius: 100%;
-    padding: 5px 5px;
+    padding: 10px 10px;
 }
 /* contact search */
 .contact-search {
@@ -158,12 +158,54 @@ img {
     display: flex;
     flex-direction: column;
 }
-
+/* main chat */
 .main-chat {
     flex-grow: 1;
     background-image: url(../img/mine.jpg);
     background-size: contain;
+    padding: 20px 30px;
+    overflow: auto;
 }
+
+.chat-container {
+    max-width: 99%;
+    margin: 0 auto;
+    display: flex;
+}
+
+.received-message {
+    border: 1px solid black;
+    min-width: 50px;
+    padding: 5px 5px;
+    flex-basis: calc(100% / 2);
+}
+
+.received-message li {
+    list-style: none;
+    background-color: white;
+    line-height: 1.5em;
+    font-size: 14px;
+    border-radius: 15px;
+    padding: 5px 5px;
+}
+
+.sent-message {
+    min-width: 50px;
+    border: 1px solid black;
+    padding: 5px 10px;
+    flex-basis: calc(100% / 2);
+}
+
+.sent-message li {
+    list-style: none;
+    background-color: #D7F9BC;
+    line-height: 1.5em;
+    font-size: 14px;
+    border-radius: 15px;
+    padding: 5px 5px;
+}
+
+
 
 /* chat header */
 
