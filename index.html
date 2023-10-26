@@ -49,12 +49,12 @@
                         <!--contact list-->
                         <div class="contact-list">
                             <ul>
-                                <li>
+                                <li v-for="(contact, index) in contacts" :key="index">
                                     <figure>
-                                        <img src="./img/avatar_1.jpg" alt="">
+                                        <img src="" alt="">
                                     </figure>
                                     <div class="text">
-                                        <h4>Michele</h4>
+                                        <h4>{{ contact.name }}</h4>
                                         <p>Lorem ipsum dolor sit amet consectetur</p>
                                     </div>
                                     <div class="hour">

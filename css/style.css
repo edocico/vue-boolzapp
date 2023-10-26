@@ -139,6 +139,10 @@ img {
     border-bottom: 1px solid #989798;
 }
 
+.contact-list li:hover {
+    background-color: #E9EAEB;
+}
+
 .contact-list img {
     width: 50px;
 }
