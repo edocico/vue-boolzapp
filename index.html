@@ -110,7 +110,7 @@
                             </div>
                             <!--text input space-->
                             <div class="input-space">
-                                <input type="text" placeholder="Scrivi messaggio">
+                                <input type="text" placeholder="Scrivi messaggio" v-model="NewText" @keyup.enter="sendMessage(activeChat)">
                             </div>
                             <div class="input-mic">
                                 <i class="fa-solid fa-microphone"></i> 

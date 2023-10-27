@@ -4,6 +4,7 @@ const { createApp } = Vue
     data() {
       return {
         userName: 'Edoardo',
+        NewText: '',
         activeChat: 0,
         contacts: [
           {
@@ -173,6 +174,19 @@ const { createApp } = Vue
     methods: {
       clickToChangeChat(contactIndex) {
         this.activeChat = contactIndex
+      },
+      sendMessage(index) {
+        const textInput = this.NewText.trim()
+        if (textInput.length > 0) {
+          const newBubble = {
+            date: 'placeholder',
+            message: textInput,
+            status: 'sent'
+          }
+          this.contacts[index].messages.push(newBubble)
+        }
+        
+        this.NewText = ''
       }
     }
   }).mount('#app')
