@@ -92,10 +92,11 @@
                                 <div class="chat-container">
                                     <div class="received-message">
                                         <ul>
-                                            <li class="message-received">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur iure in commodi inventore aliquid maiores saepe, doloribus quo deserunt placeat sint at eos rem quam maxime unde. Cupiditate, in minus?</li>
-                                            <li class="message-sent">
-                                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet ullam, voluptates nemo voluptate accusamus autem aspernatur possimus perferendis cumque rem quaerat enim praesentium distinctio tempore expedita totam asperiores? Consectetur, consequuntur.
+                                            <li v-for="(bubble, index) in contacts[activeChat].messages" :key="index"
+                                            :class="bubble.status === 'sent' ? 'message-sent' : 'message-received'">
+                                               {{ bubble.message}} 
                                             </li>
+                                            
                                         </ul>
                                     </div>
                                    

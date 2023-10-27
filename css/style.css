@@ -179,13 +179,13 @@ img {
 }
 
 .chat-container {
-    max-width: 99%;
+    
     margin: 0 auto;
     display: flex;
 }
 
 .received-message {    
-    min-width: 50px;
+    width: 100%;
     padding: 5px 5px;    
 }
 
