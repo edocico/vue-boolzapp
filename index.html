@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/01f6bd7def.js" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <title>Boolzapp</title>
@@ -26,7 +29,7 @@
                         <!--user contact-->
                         <div class="user-contact">
                             <div><img src="./img/avatar_2.jpg" alt=""></div>
-                            <div class="user"><h4>Gianluca</h4></div>
+                            <div class="user"><h4>{{ userName }}</h4></div>
                             <div class="symbol"><i class="fa-solid fa-ellipsis-vertical"></i></div>
                         </div>
                         <!--contact notification-->
@@ -34,7 +37,7 @@
                             <div class="symbol"><i class="fa-solid fa-bell-slash"></i></div>
                             <div class="text">
                                 <h4>Ricevi notifiche di nuovi messaggi</h4>
-                                <p>Lorem ipsum dolor sit amet et?</p>
+                                <p>Attiva notifiche desktop</p>
                             </div>
                         </div>
                         <!--contact search-->
@@ -49,9 +52,9 @@
                         <!--contact list-->
                         <div class="contact-list">
                             <ul>
-                                <li v-for="(contact, index) in contacts" :key="index">
+                                <li v-for="(contact, index) in contacts" :key="index" :class="{'box-active' : index === activeChat}" @click="clickToChangeChat(index)">
                                     <figure>
-                                        <img src="" alt="">
+                                        <img :src="contact.avatar" alt="">
                                     </figure>
                                     <div class="text">
                                         <h4>{{ contact.name }}</h4>
@@ -70,11 +73,11 @@
                         <div class="chat-header">
                             <div class="pic">
                                 <figure>
-                                    <img src="./img/avatar_1.jpg" alt="">
+                                    <img :src="contacts[activeChat].avatar" alt="">
                                 </figure>
                             </div>
                             <div class="profile">
-                                <h4>Fabio</h4>
+                                <h4>{{ contacts[activeChat].name }}</h4>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
                             </div>
                             <div class="symbol">

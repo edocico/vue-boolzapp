@@ -3,12 +3,14 @@ const { createApp } = Vue
   createApp({
     data() {
       return {
+        userName: 'Edoardo',
+        activeChat: 0,
         contacts: [
           {
             name: 'Michele',
             avatar: './img/avatar_1.jpg',
             visible: true,
-            message: [
+            messages: [
               {
                 date: '10/01/2020 15:30:55',
                 message: 'Hai portato a spasso il cane?',
@@ -166,6 +168,11 @@ const { createApp } = Vue
             ],
           }
         ]
+      }
+    },
+    methods: {
+      clickToChangeChat(contactIndex) {
+        this.activeChat = contactIndex
       }
     }
   }).mount('#app')
