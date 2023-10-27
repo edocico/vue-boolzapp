@@ -275,4 +275,5 @@ img {
 
 .box-active {
     box-shadow: 2px 2px 3px black;
+    background-color: #E9EAEB;
 }
