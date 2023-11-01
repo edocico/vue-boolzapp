@@ -46,13 +46,14 @@
                                 <i class="fa-solid fa-magnifying-glass"></i> 
                             </div>
                             <div class="input">
-                                <input type="text" placeholder="cerca una chat">
+                                <input type="text" placeholder="cerca una chat" v-model="search">
                             </div>
                         </div>
                         <!--contact list-->
                         <div class="contact-list">
                             <ul>
-                                <li v-for="(contact, index) in contacts" :key="index" :class="{'box-active' : index === activeChat}" @click="clickToChangeChat(index)">
+                                <li v-for="(contact, index) in contacts" :key="index" :class="{'box-active' : index === activeChat}" @click="clickToChangeChat(index)"
+                                @keyup.up="chatUp(index)" v-show="contact.name.includes(search)">
                                     <figure>
                                         <img :src="contact.avatar" alt="">
                                     </figure>
@@ -110,7 +111,7 @@
                             </div>
                             <!--text input space-->
                             <div class="input-space">
-                                <input type="text" placeholder="Scrivi messaggio" v-model="NewText" @keyup.enter="sendMessage(activeChat)">
+                                <input type="text" placeholder="Scrivi messaggio" v-model="NewText" @keyup.enter="sendMessage(activeChat)" @keyup.enter="setTimeout(messageAnswer(activeChat), 2000)">
                             </div>
                             <div class="input-mic">
                                 <i class="fa-solid fa-microphone"></i> 

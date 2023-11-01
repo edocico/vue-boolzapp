@@ -6,6 +6,7 @@ const { createApp } = Vue
         userName: 'Edoardo',
         NewText: '',
         activeChat: 0,
+        search: '',
         contacts: [
           {
             name: 'Michele',
@@ -186,7 +187,23 @@ const { createApp } = Vue
           this.contacts[index].messages.push(newBubble)
         }
         
-        this.NewText = ''
+        this.NewText = ''  
+      },
+      messageAnswer(index) {
+       
+          const newBubble = {
+            date: 'palceholder',
+            message: 'Ok',
+            status: 'received'
+          }
+          this.contacts[index].messages.push(newBubble)
+      },
+      chatUp(contactIndex) {
+        activeChat++
+        
+        
+        
       }
+      
     }
   }).mount('#app')
